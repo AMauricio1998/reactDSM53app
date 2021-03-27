@@ -15,23 +15,23 @@ export default function ScreenPost(){
         <View style={{flex:1, justifyContent:"center", flexDirection:"row", alignItems:"center"}}>
 
             <View style={{flex:1,flexDirection:"row",justifyContent:"center"}}><Image style={styles.imageCategory} source={require('../../../assets/images/C.png')}/></View>
-            <View style={{flex:1,flexDirection:"row",justifyContent:"center"}}><Image style={styles.imageCategory} source={require('../../../assets/images/C.png')}/></View>
-            <View style={{flex:1,flexDirection:"row",justifyContent:"center"}}><Image style={styles.imageCategory} source={require('../../../assets/images/C.png')}/></View>
+            <View style={{flex:1,flexDirection:"row",justifyContent:"center"}}><Image style={styles.imageCategory} source={require('../../../assets/images/C8.png')}/></View>
+            <View style={{flex:1,flexDirection:"row",justifyContent:"center"}}><Image style={styles.imageCategory} source={require('../../../assets/images/php.png')}/></View>
            
         </View>
         <Text>GIT Ver Más</Text>
 
         <View style={{flex:1, justifyContent:"center", flexDirection:"row", alignItems:"center"}}>
-        <View style={{flex:1,flexDirection:"row",justifyContent:"center"}}><Image style={styles.imageCategory} source={require('../../../assets/images/bitbucket-logo.png')}/></View>
-        <View style={{flex:1,flexDirection:"row",justifyContent:"center"}}><Image style={styles.imageCategory} source={require('../../../assets/images/bitbucket-logo.png')}/></View>
-        <View style={{flex:1,flexDirection:"row",justifyContent:"center"}}><Image style={styles.imageCategory} source={require('../../../assets/images/bitbucket-logo.png')}/></View>
+        <View style={{flex:1,flexDirection:"row",justifyContent:"center"}}><Image style={styles.imageCategory} source={require('../../../assets/images/git.png')}/></View>
+        <View style={{flex:1,flexDirection:"row",justifyContent:"center"}}><Image style={styles.imageCategory} source={require('../../../assets/images/gi.png')}/></View>
+        <View style={{flex:1,flexDirection:"row",justifyContent:"center"}}><Image style={styles.imageCategory} source={require('../../../assets/images/gitlab.png')}/></View>
 
         </View>
         <Text>Aplicaciones Ver Más</Text>
         <View style={{flex:1, justifyContent:"center", flexDirection:"row", alignItems:"center"}}>
-            <View style={{flex:1,flexDirection:"row",justifyContent:"center"}}><Image style={styles.imageCategory} source={require('../../../assets/images/872px-Android_robot.svg.png')}/></View>
-            <View style={{flex:1,flexDirection:"row",justifyContent:"center"}}><Image style={styles.imageCategory} source={require('../../../assets/images/872px-Android_robot.svg.png')}/></View>
-            <View style={{flex:1,flexDirection:"row",justifyContent:"center"}}><Image style={styles.imageCategory} source={require('../../../assets/images/872px-Android_robot.svg.png')}/></View>
+            <View style={{flex:1,flexDirection:"row",justifyContent:"center"}}><Image style={styles.imageCategory} source={require('../../../assets/images/in.png')}/></View>
+            <View style={{flex:1,flexDirection:"row",justifyContent:"center"}}><Image style={styles.imageCategory} source={require('../../../assets/images/ude.png')}/></View>
+            <View style={{flex:1,flexDirection:"row",justifyContent:"center"}}><Image style={styles.imageCategory} source={require('../../../assets/images/react.png')}/></View>
             
         </View>
  

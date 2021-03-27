@@ -17,15 +17,8 @@
  import { HomeStack } from '../reactDSM53/src/navigator/stacks/HomeStack';
  import { CategoriesStack } from '../reactDSM53/src/navigator/stacks/CategoriesStack';
  import { PostStack } from '../reactDSM53/src/navigator/stacks/PostStack'
+ import infoScreen from './src/navigator/screens/info/infoScreen';
 
-  
- function  InfoScreen(){
-  return(
-    <View style={{flex:1, justifyContent: 'center' ,alignItems: 'center', backgroundColor: "red"}}>
-      <Text>PANTALLA DE INFO</Text>
-    </View>
-  );
-}
 
 const Tab = createBottomTabNavigator();
 
@@ -54,7 +47,7 @@ export default function App(){
                 ),
               }}
           />
-            <Tab.Screen name="Info" component={InfoScreen} 
+            <Tab.Screen name="Info" component={infoScreen} 
               options={{
                 tabBarIcon: ({ color, size }) => (
                   <MaterialCommunityIcons name="information" color={'#F32A64'} size={35} />

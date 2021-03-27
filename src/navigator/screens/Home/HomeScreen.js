@@ -1,7 +1,10 @@
 import * as React from 'react';
-import {Text, View,StyleSheet} from 'react-native';
+import {Text, View,StyleSheet, Image} from 'react-native';
 //-------------------------------------------------------------------------------------
  /* Declaración De Nuestro función Home Screenjs */
+ 
+
+
 export default function HomeScreen(){
 
     return(
@@ -10,9 +13,7 @@ export default function HomeScreen(){
       // Try setting `flexDirection` to `"row"`.
       flexDirection: "column"}]}>
 
-      {/* V-SLIDER */}
-      <View style={{ flex: 1, backgroundColor: "red", justifyContent:"center",}}><Text>Slider</Text></View>
-      {/* VISTA CATEGORI 1 */}
+      <View style={{ flex: 1, backgroundColor: "red", justifyContent:"center",}}><Text>Slider</Text></View>      
 
       <Text>V2-Base De Datos</Text>
       <View style={{flex:1, backgroundColor:"darkorange", justifyContent:"center", flexDirection:"row", alignItems:"center"}}>
@@ -34,9 +35,9 @@ export default function HomeScreen(){
 }
 
 
-const styles = StyleSheet.create({
-    container: {
-    flex: 1,
-    padding: 20,
-    }
-    });
+ const styles = StyleSheet.create({
+     container: {
+     flex: 1,
+     padding: 20,
+     }
+     });
