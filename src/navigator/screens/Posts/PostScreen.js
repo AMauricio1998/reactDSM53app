@@ -1,44 +1,46 @@
 import * as React from 'react';
 
-import {Text,View,StyleSheet, Image} from 'react-native';
+import {Text,View,StyleSheet, Image, ActivityIndicator, FlatList} from 'react-native';
 
 /* FUNCION DE NUESTRA PANTALLA DE POst */
-export default function ScreenPost(){
+export default class ScreenPost extends Component {
+  constructor(props){
+    super(props);
+    this.state = {
+      post: [],
+      isLoading: true
+    };
+  }
+componentDidMount(){
+  fetch('http://10.0.2.2:8000/api/posts')
+  .then((response) => response.json())
+  .then((json) =>{
+    this.setState({ post: json.posts});
+  })
+  .catch((error) => console.error(error))
+  .finally(()=>{
+    this.setState({isLoading: false});
+  });
+}
+  render(){
+    const { post, isLoading} = this.state;
   return(
-      <>
-     <View style={[styles.container, {
-        // Try setting `flexDirection` to `"row"`.
-        flexDirection: "column"}]}>
-        {/* VISTA CATEGORI 1 */}
-        <Text>Laravel Ver Más</Text>
-
-        <View style={{flex:1, justifyContent:"center", flexDirection:"row", alignItems:"center"}}>
-
-            <View style={{flex:1,flexDirection:"row",justifyContent:"center"}}><Image style={styles.imageCategory} source={require('../../../assets/images/C.png')}/></View>
-            <View style={{flex:1,flexDirection:"row",justifyContent:"center"}}><Image style={styles.imageCategory} source={require('../../../assets/images/C8.png')}/></View>
-            <View style={{flex:1,flexDirection:"row",justifyContent:"center"}}><Image style={styles.imageCategory} source={require('../../../assets/images/php.png')}/></View>
-           
-        </View>
-        <Text>GIT Ver Más</Text>
-
-        <View style={{flex:1, justifyContent:"center", flexDirection:"row", alignItems:"center"}}>
-        <View style={{flex:1,flexDirection:"row",justifyContent:"center"}}><Image style={styles.imageCategory} source={require('../../../assets/images/git.png')}/></View>
-        <View style={{flex:1,flexDirection:"row",justifyContent:"center"}}><Image style={styles.imageCategory} source={require('../../../assets/images/gi.png')}/></View>
-        <View style={{flex:1,flexDirection:"row",justifyContent:"center"}}><Image style={styles.imageCategory} source={require('../../../assets/images/gitlab.png')}/></View>
-
-        </View>
-        <Text>Aplicaciones Ver Más</Text>
-        <View style={{flex:1, justifyContent:"center", flexDirection:"row", alignItems:"center"}}>
-            <View style={{flex:1,flexDirection:"row",justifyContent:"center"}}><Image style={styles.imageCategory} source={require('../../../assets/images/in.png')}/></View>
-            <View style={{flex:1,flexDirection:"row",justifyContent:"center"}}><Image style={styles.imageCategory} source={require('../../../assets/images/ude.png')}/></View>
-            <View style={{flex:1,flexDirection:"row",justifyContent:"center"}}><Image style={styles.imageCategory} source={require('../../../assets/images/react.png')}/></View>
-            
-        </View>
- 
+  
+    <View style={{flex:1, padding:24}}>
+      { isLoading ? <ActivityIndicator/> : (
+        <FlatList
+        data={post}
+        keyExtractor = {({ id } , index) => id}
+        renderItem = {({ item }) => (
+          <Text>{item.title}</Text>, 
+          <Image style={styles.imageCategory} source={{uri: item.image}} />
+          
+        )}
+        />)}
     </View>
-    </>
   );
 }
+};
 
 const styles = StyleSheet.create({
     container: {
