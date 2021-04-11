@@ -17,7 +17,7 @@
  import { HomeStack } from '../reactDSM53/src/navigator/stacks/HomeStack';
  import { CategoriesStack } from '../reactDSM53/src/navigator/stacks/CategoriesStack';
  import { PostStack } from '../reactDSM53/src/navigator/stacks/PostStack'
- import infoScreen from './src/navigator/screens/info/infoScreen';
+ import { infoStack } from '../reactDSM53/src/navigator/stacks/infoStack';
 
 
 const Tab = createBottomTabNavigator();
@@ -47,7 +47,7 @@ export default function App(){
                 ),
               }}
           />
-            <Tab.Screen name="Info" component={infoScreen} 
+            <Tab.Screen name="Info" component={infoStack} 
               options={{
                 tabBarIcon: ({ color, size }) => (
                   <MaterialCommunityIcons name="information" color={'#F32A64'} size={35} />
