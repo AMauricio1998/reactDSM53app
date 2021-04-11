@@ -12,7 +12,7 @@ export default class CategoryScreen extends Component{
   }
 
   componentDidMount() {
-    fetch('http://10.0.2.2:8000/api/categories')
+    fetch('http://127.0.0.1:8000/api/categories')
     //fetch('https://jsonplaceholder.typicode.com/posts')
     //fetch('https://reactnative.dev/movies.json')
     .then(console.log(this.data))
