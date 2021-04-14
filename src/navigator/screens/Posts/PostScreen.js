@@ -6,7 +6,7 @@ import {Text,View,StyleSheet, Image, ActivityIndicator, FlatList} from 'react-na
       super(props);
       this.state = {
         post: [],
-        isLoading: true
+        isLoading: true 
       };
     }
   componentDidMount(){
